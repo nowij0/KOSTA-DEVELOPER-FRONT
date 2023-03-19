@@ -1,0 +1,239 @@
+@import url([//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css](notion://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css));
+
+* {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+.ref{
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.btn{
+    padding: 0px 22px;
+        appearance: none;
+        text-align: left;
+        text-decoration: none;
+        box-sizing: border-box;
+        height: 42px;
+        -webkit-tap-highlight-color: transparent;
+        display: inline-block;
+        width: auto;
+        position: relative;
+        line-height: 1;
+        font-size: 16px;
+        user-select: none;
+        cursor: pointer;
+        border: 1px solid transparent;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+        background-color: #00C471;
+        border-radius: 8px;
+
+}
+.impossible {
+    width: 20px;
+    height: 20px;
+    background-color: #57f5b3
+  
+  }
+.refTable{
+    
+    margin: auto;
+    padding-top: 20px;
+}
+
+.reservation{
+    height: 50px;
+    margin-bottom: 20px;
+    padding-top: 30px;
+}
+.resTable{
+    
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.possible{
+    background-color: #eaeaea;
+    width: 20px;
+    height: 20px;    
+}
+.completed{
+    background-color: #2a2de9;
+    width: 20px;
+    height: 20px;    
+
+}
+
+.resAvailable{
+    height: 100px;
+}
+.impossible1{
+    padding-right: 7px
+}
+.possible1{
+    padding-right: 7px
+}
+.completed1{
+    padding-right: 7px
+}
+.impossible2{
+    padding-right: 20px
+}
+.possible2{
+    padding-right: 20px
+}
+
+
+.time{
+    height: 120px;
+    text-align: center
+}
+.price{
+    width: 120px;
+    text-align: center
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+input:disabled {
+    background: #2ae996;
+    
+}
+.checkboxTable{
+    width: 700px;
+    height: 100px;
+    margin: auto;
+    margin-top: -30px;
+    margin-bottom: 100px;
+    overflow-y: scroll
+}
+div.checkbox-pack{
+    overflow-y: scroll;
+    text-align: center;
+    
+    
+}
+#heightcontrol{
+    vertical-align: top
+}
+.checkbox {
+    appearance: none;
+    height: 50px;
+    width: 200px;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(37, 145, 251, 0.98) 0.1%, rgba(0, 7, 128, 1) 99.8%);
+    background-size: 360% 100%;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 500px, 50px, 20px, 50px;
+}
+
+.checkbox:after {
+    content: attr(data-name);
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    color: #3f3f3f;
+    z-index: 99;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.checkbox:before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0px;
+    height: 200%;
+    width: 200%;
+    background: #e9e9e9;
+    z-index: 0;
+    transition: all 0.2s linear;
+    transform: scale(0.6) translate(-50%, -50%);
+    border-bottom: 2px solid black;
+}
+.checkbox:hover:before,
+.checkbox:focus-visible:before {
+    background: #cacaca;
+    top: -4%;
+    left: 20%;
+}
+.checkbox:disabled::before {
+    background-color: #2ae996;
+    ;
+    background: #2ae996;
+}
+.checkbox:disabled::after{
+    background-color: #2ae996;;
+    background: #2ae996;
+}
+.checkbox:checked:before {
+    opacity: 0;
+    transform: scale(0.9);
+}
+.checkbox:checked:after {
+    color: white;
+}
+.checkbox:checked {
+    box-shadow: 0px 4px 10px -6px black;
+}
+
+.checkbox:focus-visible {
+    outline: none;
+    box-shadow: 0px 0px 0px 5px #480f5d;
+}
+.guide{
+    margin-top: 20px;
+    margin-left: 40%;
+    font:bold;
+}
+.time{
+    width: 200px;
+}
+.valueStorage{
+    display: none;
+}
+#input-date{
+    width: 200px;
+    height: 20px;
+    margin-left: 40%;
+}
+.reserve{
+    text-align: center;
+}
+        #footer-wrap>div.footer-container {
+            background-color: #303740;
+        }
+.reroad{
+    
+    appearance: none;
+    margin-left: 85px;
+        text-align: center;
+        text-decoration: none;
+        box-sizing: border-box;
+        height: 32px;
+        -webkit-tap-highlight-color: transparent;
+        display: inline-block;
+        width: 150px;
+        position: relative;
+        line-height: 1;
+        font-size: 16px;
+        user-select: none;
+        cursor: pointer;
+        border: 1px solid transparent;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+        background-color: #00C471;
+        border-radius: 8px;
+}
+div.top-title {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+span#showLoginId {
+    font-weight: 800;
+    color: #00C471;
+}

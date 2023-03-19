@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--<link rel="stylesheet" href="../css/basic.css">-->
+    <link rel="stylesheet" href="/css/host/inforeservation.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/hostbasic.js"></script>
+    <script src="/js/host/inforeservation.js"></script>
+</head>
+
+
+<body>
+    <div id="info-reservation-wrap">
+        <div id="nav-wrap">
+            <div class="nav-container">
+                <img id="logo" src="/images/logo.png">
+                <nav>
+                    <ul>
+                        <li class='logout'>로그아웃</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div id="content-wrap">
+            <div class="hostpage-body-wrap">
+                <div class="side-container">
+                    <div class="menu">
+                        <div>스터디룸</div>
+                        <ul>
+                            <li class="roomList"><a href="/html/host/listroom.html">스터디룸 목록</a></li>
+                        </ul>
+                        <div>예약관리</div>
+                        <ul>
+                            <li class="reservationList"><a href="/html/host/listreservation.html">모든 예약내역</a></li>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <div class="top-title">
+                        <span id="showLoginId"></span>&nbsp;님, &nbsp;&nbsp;반갑습니다 &nbsp;&nbsp;>
+                    </div>
+                    <div class="info-title">예약 상세 내역
+                        <input type='button' value='목록으로 돌아가기'>
+                    </div>
+
+                    <div id="reservation-infomation-box">
+                        <div class="reservation-list">
+                            <!-- 원본 -->
+                            <div class="reservation-list-origin">
+                                <div class='title'>예약 번호</div>
+                                <div id='reservation-seq' class='field'></div>
+                                <div class='title' id="titleName">이용자 성함</div>
+                                <div id='reservation-name' class='field'></div>
+                                <div class='title'>휴대번호</div>
+                                <div id='reservation-hp' class='field'></div>
+                                <div class='title'>룸 이름</div>
+                                <div id='reservation-roomName' class='field'></div>
+                                <div class='title'>이용일자</div>
+                                <div id='reservation-usingDate' class='field'></div>
+                                <div class='title'>시작 시간</div>
+                                <div id='reservation-startTime' class='field'></div>
+                                <div class='title'>종료 시간</div>
+                                <div id='reservation-endTime' class='field'></div>
+                                <input type='button' id='delreservation' value='예약취소'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer-wrap">
+                <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+            </div>
+</body>
+
+</html>

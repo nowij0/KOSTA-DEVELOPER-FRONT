@@ -1,0 +1,230 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+*{margin: 0; padding: 0; font-family: 'Spoqa Han Sans Neo', 'sans-serif';} 
+#index-wrap {width: 100%; height: 1500px; color: #000000; font-size: 15px; }
+#banner-wrap{width: 100%;}
+#content-wrap{width: 100%; height:auto; }
+#footer-wrap{
+    width: 100%; 
+    height: 100px; 
+    line-height: 100px; 
+    margin: 0 auto; 
+    text-align:center; 
+    background-color: #303740; 
+    color:#fff;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+    }
+    
+
+.nav-container {width:1000px; height: 100px; line-height: 60px; margin: 0 auto;} 
+.banner-container {width: 1000px; height: 300px; line-height: 300px; margin: 0 auto;  }
+.content-container {width: 1000px; margin: 0 auto; }
+.footer-container{width: 100%; height: 100px; line-height: 100px; margin: 0 auto; }
+
+
+#footer-wrap > div.footer-container{
+    background-color: #303740; 
+}
+
+.nav-container>nav{
+    /* width: 600px; */
+    /* display: inline-block; */
+    float: right;
+}
+
+.nav-container>img{
+    height: 30px;
+    float: left;
+    margin-top: 33px;
+    margin-left: 20px;
+}
+.nav-container>nav>ul{
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px;
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 17px;
+}
+
+.nav-container>nav>ul>li{
+    display: inline-block;
+    margin-left:15px;
+}
+
+/*  클릭 안 한 메뉴 */
+.nav-container>nav>ul>li>a:link{
+    text-decoration: none;
+    color: black;
+    margin-top: 50px;
+}
+
+/*  클릭 한 메뉴 */
+.nav-container>nav>ul>li>a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-container>nav>ul>li>a:hover{
+    color:  #00C471;
+    font-weight: bold;
+}
+
+.nav-container>nav>ul>li:hover{
+    color:  #00C471;
+    font-weight: bold;
+}
+
+
+#content-wrap > div > div.info-title{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* ////////////////////////////////// */
+
+
+#add-studycafe-wrap>#content-wrap>.content-container>.addstudycafeform{
+    margin: 0 auto;
+    width: 600px;
+    height: 830px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    background-color: #F9F9F9;
+    padding-top: 10px;
+    
+}
+
+#add-studycafe-wrap>#content-wrap>.content-container>.addstudycafeform>form>.field{
+    margin-left: 23px;
+    margin-bottom: 10px;
+}
+
+#add-studycafe-wrap>#content-wrap>.content-container>.addstudycafeform>form>.formtitle{
+    margin-left: 23px;
+    margin-bottom: 7px;
+}
+
+#add-studycafe-wrap>#content-wrap>.content-container>.addstudycafeform>form>.field>textarea{
+    width: 535px;
+    height: 130px;
+    resize: none;
+    padding: 8px 8px 8px 8px
+}
+
+#add-studycafe-wrap>#content-wrap>.content-container>.addstudycafeform input[type=text]{
+    width: 530px;
+    height: 30px;
+    margin-left: 2px;
+    padding: 3px 7px 3px 7px
+}
+
+#add-studycafe-wrap>#content-wrap>.content-container>.addstudycafeform>form>div.field>input#sample6_address{
+    width: 300px;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#add-studycafe-wrap>#content-wrap>.content-container>.addstudycafeform>form>div.field>input#sample6_detailAddress{
+    width: 300px;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    float: left;
+}
+
+#add-studycafe-wrap>#content-wrap>.content-container>.addstudycafeform>form>div.field>input#sample6_extraAddress{
+    width: 202px;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+
+#add-studycafe-wrap>#content-wrap>.content-container>.addstudycafeform>form>div.field>input#addrbtn{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+
+
+#add-studycafe-wrap>#content-wrap>.content-container>.addstudycafeform>form>.textLengthWrap{
+    float: right;
+    margin-right: 25px;
+}
+
+#add-studycafe-wrap>#content-wrap>.content-container>.addstudycafeform>form>div.opentimetextbox{
+    width: 100px;
+    margin-left: 23px;
+    float: left;
+}
+
+
+#add-studycafe-wrap>#content-wrap>.content-container>.addstudycafeform>form>div.opentimetextbox>div.field>input#openTime{
+    margin-top: 7px;
+    margin-bottom: 10px;
+    width: 100px;
+}
+
+#add-studycafe-wrap>#content-wrap>.content-container>.addstudycafeform>form>div.endtimetextbox{
+    margin-left: 23px;
+    float: left;
+    width: 100px;
+ }
+
+
+ #add-studycafe-wrap>#content-wrap>.content-container>.addstudycafeform>form>div.endtimetextbox>div.field>input#endTime{
+    margin-top: 7px;
+    margin-bottom: 10px;
+    width: 100px;
+}
+
+#add-studycafe-wrap>#content-wrap>.content-container>.addstudycafeform input[type=submit]{
+    margin-left: 240px;
+    margin-top: 20px;
+    border-width: 1px;
+    appearance: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 35px;
+    -webkit-tap-highlight-color: transparent;
+    width:120px;
+    position: relative;
+    line-height: 1;
+    font-size: 18px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #00C471;
+    border-radius: 8px;
+
+
+}
+
+div.show{
+    height:130px;
+    width: 548px;
+    border:1px dotted;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    background-color: white;
+}
+div.show>img{
+    max-height: 90%;
+    width:auto;
+    margin: 7px 5px 5px 5px;
+}
+
+b{ 
+    font-size: 15px;
+}

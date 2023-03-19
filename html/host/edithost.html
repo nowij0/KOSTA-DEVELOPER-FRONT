@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--<link rel="stylesheet" href="../css/basic.css">-->
+    <link rel="stylesheet" href="/css/host/edithost.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/hostbasic.js"></script>
+    <script src="/js/host/edithost.js"></script>
+</head>
+
+
+<body>
+    <div id="edit-host-wrap">
+        <div id="nav-wrap">
+            <div class="nav-container">
+                <img id="logo" src="/images/logo.png">
+                <nav>
+                    <ul>
+                        <li class='logout'>로그아웃</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div id="content-wrap">
+            <div class="hostpage-body-wrap">
+                <div class="side-container">
+                    <div class="menu">
+                        <div>스터디룸</div>
+                        <ul>
+                            <li class="roomList"><a href="/html/host/listroom.html">스터디룸 목록</a></li>
+                        </ul>
+                        <div>예약관리</div>
+                        <ul>
+                            <li class="reservationList"><a href="/html/host/listreservation.html">모든 예약내역</a></li>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <div class="top-title">
+                        <span id="showLoginId"></span>&nbsp;님, &nbsp;&nbsp;반갑습니다 &nbsp;&nbsp;>
+                    </div>
+                    <div class="info-title">호스트 회원정보 수정</div>
+                    <!--비밀번호 유효성검사하기-->
+                    <div id="host-infomation-box">
+                        <div class="title">아이디</div>
+                        <input type="text" id="hostuser-id" class="field" readonly>
+                        <div class="title">비밀번호</div>
+                        <input type="password" id="hostuser-pwd" class="field">
+                        <div class="title">사업자번호</div>
+                        <input type="text" id="hostuser-num" class="field" readonly>
+                        <div class="title">대표자명</div>
+                        <input type="text" id="hostuser-name" class="field" readonly>
+                        <div class="title">연락처</div>
+                        <input type="text" id="hostuser-tel" class="field" placeholder="010-0000-0000">
+                        <div class="title">이메일</div>
+                        <input type="text" id="hostuser-email" class="field" placeholder="developer@developer.com">
+                        <div class="info-button">
+                            <input type="button" id= 'cancel' value="취소">
+                            <input type="button" id= 'editBtn' value="수정완료">
+                            <button id="out">탈퇴</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-wrap">
+            <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+        </div>
+</body>
+
+</html>

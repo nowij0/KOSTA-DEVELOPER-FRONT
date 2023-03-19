@@ -1,0 +1,220 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+* { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+a:link{text-decoration: none;}
+a:visited{text-decoration: none;}
+*{margin: 0; padding: 0; background-color: white;}
+#wrap {width: 100%; margin: 0 auto; font-size: 15px; text-align: center; flex-direction: column;}
+#nav-wrap{width: 100%; margin-bottom : 30px;}
+#content-wrap{width: 100%; margin: 0 auto;background-color: white; }
+#footer-wrap{
+    width: 100%; 
+    height: 100px; 
+    line-height: 100px; 
+    margin: 0 auto; 
+    text-align:center; 
+    background-color: #303740; 
+    color:#fff;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+}
+
+#footer-wrap > div.footer-container{background-color: #303740; }
+/*자식이 height값을 가지고 있으면 부모의 height 값은 없어도 된다.
+ width: 100%는 기본값이기 때문에 없어도 된다 */
+.nav-container {width:1000px; height: 100px; line-height: 60px; margin: 0 auto;} 
+.content-container {width: 1000px; height: 100%; line-height: 20px; margin: 0 auto;}
+.board-container{display:flex; width:100%; margin : 0 auto;}
+.nav-container>nav{
+    /* width: 600px; */
+    /* display: inline-block; */
+    float: right;
+}
+
+.nav-container>img{
+    height: 30px;
+    float: left;
+    margin-top: 33px;
+    margin-left: 20px;
+}
+
+.nav-container>nav>ul{
+    /* 리스트기능에서 동그라미(왼쪽패딩영역을 가지고있음) */
+    list-style-type: none;
+    padding-left: 0px;
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 17px;
+}
+
+.nav-container>nav>ul>li{
+   /* width: 100px; */
+    display: inline-block;
+    margin-left:15px;
+}
+
+/*  클릭 안 한 메뉴 */
+.nav-container>nav>ul>li>a:link{
+    text-decoration: none;
+    color: black;
+    margin-top: 50px;
+}
+
+/*  클릭 한 메뉴 */
+.nav-container>nav>ul>li>a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-container>nav>ul>li>a:hover{
+    color:  #00C471;
+    font-weight: bold;
+}
+
+.nav-container>nav>ul>li:hover{
+    color:  #00C471;
+    font-weight: bold;
+}
+
+.board-banner{
+    font-size:50px;
+    text-align:left;
+    padding:15px;
+    border:1px solid black;
+    background-color : #343b3d;
+    color : white;
+    height:250px;
+    width:1000px;
+    margin:0 auto;
+    margin-bottom:20px;
+}
+.board-banner span{
+    font-size:20px;
+    background-color:  #343b3d;
+    color:white;
+}
+
+.list-container{
+    border-bottom:1px solid rgb(6, 29, 175);
+    padding: 30px 20px;
+    text-align: left;
+    color : black;
+
+}
+.list-container .title{
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.list-container .content{
+    font-size: 16px;
+    color: #5d6366;
+    margin-bottom: 15px;
+    width: 100%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.list-container .nickname{
+    font-size:12px;
+    color:#5d63669e;
+}
+
+.list-container .info{
+    display:flex;  
+}
+.list-container .subinfo1{
+    flex:7; 
+    display:inline-block;
+    text-align: left;
+}
+.list-container .subinfo2{
+    flex:3;
+    display:inline-block;
+    text-align: right;
+}
+
+.board-container .search{
+    /* border:1px solid black;  */
+    text-align:left;
+    margin-bottom:20px;
+}
+
+.content-container .filter {
+    /* border:1px solid black; */
+    margin-top : 30px;
+    margin-left:15px;
+    text-align: left;
+   
+}
+
+.board-container .filter button.fitbtn::before{
+    content: " ";
+    background-color: #000;
+    margin-top: 5px;
+    margin-right:5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%; 
+    display: block;
+    float: left;
+}
+
+.board-container .descbtn{
+    font-size:16px;
+    border:0px;
+    background-color:white;
+}
+.board-container .cntbtn{
+    margin:0px 5px;
+    font-size:16px;
+    border:0px;
+    background-color:white;
+}
+.board-container .recbtn{
+    font-size:16px;
+    border:0px;
+    background-color:white;
+}
+
+.board-container .addboard{
+    float:right;
+}
+
+.board-container .addbtn{
+    background-color:#00C471;
+    color: #fff;
+    margin-left: 8px;
+    padding: 8px;
+    border: 0px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.board-container #searchbtn{
+    border-width: 1px;
+    margin: 15px 0px 0px 15px;
+    padding: 0px 20px;
+    appearance: none;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    height: 48px;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    width:80px;
+    position: relative;
+    line-height: 1;
+    font-size: 20px;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color:  #858A8D;
+    border-radius: 8px;
+}
+

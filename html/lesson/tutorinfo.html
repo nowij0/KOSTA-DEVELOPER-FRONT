@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/lesson/tutorinfo.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/basic.js"></script>
+    <script src="/js/lesson/tutorinfo.js"></script>
+</head>
+
+<body>
+    <div id="tutorInfo">
+        <div id="nav-wrap">
+            <div class="nav-container">
+                <img id="logo" src="/images/logo.png">
+                <nav>
+                    <ul>
+                        <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
+                        <li class='studyroom'><a href="/html/studyroom/list.html">스터디카페</a></li>
+                        <li class='board'><a href="/html/board/boardlist.html">커뮤니티</a></li>
+                        <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                        <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
+                        <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
+                        <li class='lessonAdd'><a href="/html/lesson/add.html">수업등록</a></li>
+                        <li class='tutorAdd'><a href="/html/tutor/add.html">튜터등록</a></li>
+                        <li class='myPage'><a href="/html/mypage/main.html">마이페이지</a></li>
+                        <li class='adminPage'><a href="/html/admin/main.html">관리자페이지</a></li>
+                        <li class='logout'>로그아웃</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="content-container">
+            <div id="tutor">
+                <img id="tImgPath">
+                <div id="tutor-container">
+                    <div class="tutorName">이름</div>
+                    <div class="starAvg">별점</div>
+                    <div class="info">상세정보</div>
+                    <div id="chat"><a href="/html/chat/chat.html">📬</a></div>
+                </div>
+            </div>
+            <div id="tutorLessonList">
+                <div class="tutorLesson">
+                    <div class="lessonSeq" style="display: none;">수업번호</div>
+                    <img class="lImgPath">
+                    <div class="lessonName">강의명</div>
+                    <div class="location">장소</div>
+                    <div class="price">가격</div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-wrap">
+            <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+        </div>
+    </div>
+</body>
+
+</html>

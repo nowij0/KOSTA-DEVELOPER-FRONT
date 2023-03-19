@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--<link rel="stylesheet" href="../css/basic.css">-->
+    <link rel="stylesheet" href="/css/host/listroom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/hostbasic.js"></script>
+    <script src="/js/host/listroom.js"></script>
+</head>
+
+
+<body>
+    <div id="list-room-wrap">
+        <div id="nav-wrap">
+            <div class="nav-container">
+                <img id="logo" src="/images/logo.png">
+                <nav>
+                    <ul>
+                        <li class='logout'>로그아웃</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div id="content-wrap">
+            <div class="hostpage-body-wrap">
+                <div class="side-container">
+                    <div class="menu">
+                        <div>스터디룸</div>
+                        <ul>
+                            <li class="roomList"><a href="/html/host/listroom.html">스터디룸 목록</a></li>
+                        </ul>
+                        <div>예약관리</div>
+                        <ul>
+                            <li class="reservationList"><a href="/html/host/listreservation.html">모든 예약내역</a></li>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <div class="top-title">
+                        <span id="showLoginId"></span>&nbsp;님, &nbsp;&nbsp;반갑습니다 &nbsp;&nbsp;>
+                    </div>
+                    <div class="info-title">스터디룸 목록</div>
+                    <!--비밀번호 유효성검사하기-->
+                    <div id="room-infomation-box">
+                        <div class="room-list">
+
+                            <!-- 원본 -->
+                            <div class="room-list-origin">
+                            
+
+                                <div class="room-img-div">
+                                    <a href=""><img /></a>
+                                </div>
+
+                                <div id='room-seq' class='room-data'></div>
+                                <div id='room-name' class='room-data'></div>
+                                <div id='room-person' class='room-data'></div>
+                                <div id='room-price' class='room-data'></div>
+                                <div id='room-openTime' class='room-time'></div>
+                                <div id='room-endTime' class='room-time'></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-wrap">
+            <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+        </div>
+</body>
+
+</html>

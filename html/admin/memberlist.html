@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="/css/admin/memberlist.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/basic.js"></script>
+    <script src="/js/admin/Memberlist.js"></script>
+</head>
+<title>관리자페이지</title>
+<body>
+    <div id="user-index-wrap">
+        <div class="nav-container">
+            <img id="logo" src="/images/logo.png">
+            <nav>
+                <ul>
+                    <li class='lesson'><a href="/html/lesson/list.html">수업</a></li>
+                    <li class='studyroom'><a href="/html/studyroom/list.html">스터디카페</a></li>
+                    <li class='board'><a href="/html/board/boardlist.html">커뮤니티</a></li>
+                    <!-- 회원상태에 따라 다르게 보여질 메뉴 -->
+                    <li class='signup'><a href="/html/join/signupmain.html">회원가입</a></li>
+                    <li class='login'><a href="/html/login/devlogin.html">로그인</a></li>
+                    <li class='lessonAdd'><a href="/html/lesson/add.html">수업등록</a></li>
+                    <li class='tutorAdd'><a href="/html/tutor/add.html">튜터등록</a></li>
+                    <li class='myPage'><a href="/html/mypage/main.html">마이페이지</a></li>
+                    <li class='adminPage'><a href="/html/admin/main.html">관리자페이지</a></li>
+                    <li class='logout'>로그아웃</li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="content-wrap">
+            <div class="userpage-body-wrap">
+                <div class="side-container">
+                    <div class="menu">
+
+                        <div>회원관리</div>
+                        <ul>
+                            <li><a href="/html/admin/memberlist.html">일반 회원</a></li>
+                            <li><a href="/html/admin/hostuserlist.html">호스트 회원</a></li>
+                        </ul>
+                        <div>승인관리</div>
+                        <ul>
+                            <li><a href="/html/admin/hostapplylist.html">호스트 승인</a></li>
+                            <li><a href="/html/admin/tutorapplylist.html">튜터 승인</a></li>   
+                        </ul>
+                        <div><a href="/html/admin/studyroomlist.html">스터디카페 관리</a></div>
+                        <div><a href="/html/admin/lessonlist.html">수업 관리</a></div>
+                        
+                    </div>
+                </div>
+
+                <div class="content-container">
+                    <div class="top-title">
+  <span id="showLoginId"></span>&nbsp;님, &nbsp;&nbsp;반갑습니다 &nbsp;&nbsp;>
+</div>
+                    <div class="searchpackage">
+                    
+                    </select><input id="textbox" type="search" placeholder="찾으시는 유저의 정보를 입력해주세요"  ><input type="button" id="search-btn" value="찾기" >
+                    </div>
+                    <table>
+                    <table class="memberList-table1
+                    ">
+                    <th>번호</th><th id="id">아이디</th><th>닉네임</th><th id="phone">연락처</th><th></th>        
+                    </table>
+                    <div class="memberList-Box">
+                    <table  class="memberList-table2" >
+                        
+                        <tr id="memberList-body">
+                            <td id="num">1</td>
+                            <td id="userid"></td>
+                            <td id="nickname">치즈케익</td>
+                            <td id="tel">010-1234-1234</td>
+                            <td><button id="btn">상세보기<div class="idVal"></div></button></td>
+                        </tr> 
+                     
+                       
+                    </table>
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+        <div id="footer-wrap">
+            <div class="footer-container">ⓒ 2023 이거맞조. All Rights Reserved.</div>
+        </div>
+    </div>
+</body>
+
+</html>
