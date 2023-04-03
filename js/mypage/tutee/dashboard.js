@@ -20,6 +20,7 @@ $(() => {
             $(jsonObj.applyWaitList).each((i) => {
                 let $copy = $origin.clone();
                 $copy.find('div.al-lastLsit-lessonName').html('📍 ' + jsonObj.applyWaitList[i].lessonName).css('background-color', '#F9F9F9');
+                $copy.find('div.al-lastLsit-lessonSeq').html( jsonObj.applyWaitList[i].lessonSeq)
                 $parent.append($copy);
             })
             $origin.hide();
@@ -30,6 +31,7 @@ $(() => {
             $(jsonObj.notYetList).each((i) => {
                 let $copy = $origin.clone();
                 $copy.find('div.ny-lastLsit-lessonName').html('📍 ' + jsonObj.notYetList[i].lessonName).css('background-color', '#F9F9F9');
+                $copy.find('div.al-lastLsit-lessonSeq').html( jsonObj.notYetList[i].lessonSeq)
                 $parent.append($copy);
             })
             $origin.hide();
@@ -40,6 +42,7 @@ $(() => {
             $(jsonObj.rejectList).each((i) => {
                 let $copy = $origin.clone();
                 $copy.find('div.rl-lastLsit-lessonName').html('📍 ' + jsonObj.rejectList[i].lessonName).css('background-color', '#F9F9F9');
+                $copy.find('div.al-lastLsit-lessonSeq').html( jsonObj.rejectList[i].lessonSeq)
                 $parent.append($copy);
             })
             $origin.hide();
@@ -50,6 +53,7 @@ $(() => {
             $(jsonObj.proceedingList).each((i) => {
                 let $copy = $origin.clone();
                 $copy.find('div.pl-lastLsit-lessonName').html('📍 ' + jsonObj.proceedingList[i].lessonName).css('background-color', '#F9F9F9');
+                $copy.find('div.al-lastLsit-lessonSeq').html( jsonObj.proceedingList[i].lessonSeq)
                 $parent.append($copy);
             })
             $origin.hide();
@@ -60,6 +64,7 @@ $(() => {
             $(jsonObj.lastList).each((i) => {
                 let $copy = $origin.clone();
                 $copy.find('div.la-lastLsit-lessonName').html('📍 ' + jsonObj.lastList[i].lessonName).css('background-color', '#F9F9F9');
+                $copy.find('div.al-lastLsit-lessonSeq').html( jsonObj.notYetList[i].lessonSeq)
                 $parent.append($copy);
             })
             $origin.hide();
@@ -74,10 +79,27 @@ $(() => {
 
 
     //===  수업 제목 누르면 해당 수업 상세정보로 이동  START ===
-    $("div.lesson-list").on('click', 'div.lesson', (e) => {
-        let lessonSeq = $(e.target).parents('div.lesson').find('div.lessonSeq').html();
-        location.href = frontURL + 'admin/lesson/detail.html?' + lessonSeq;
+    $("div.dash-box").on('click', 'div.al-lastLsit-lessonName', (e) => {
+        let lessonSeq = $(e.target).parents('#applyWaitList').find('div.al-lastLsit-lessonSeq').html();
+        location.href = frontURL + 'lesson/detail.html?' + lessonSeq;
     })
+    $("div.dash-box").on('click', 'div.ny-lastLsit-lessonName', (e) => {
+        let lessonSeq = $(e.target).parents('#notYetList').find('div.al-lastLsit-lessonSeq').html();
+        location.href = frontURL + 'lesson/detail.html?' + lessonSeq;
+    })
+    $("div.dash-box").on('click', 'div.rl-lastLsit-lessonName', (e) => {
+        let lessonSeq = $(e.target).parents('#rejectList').find('div.al-lastLsit-lessonSeq').html();
+        location.href = frontURL + 'lesson/detail.html?' + lessonSeq;
+    })
+    $("div.dash-box").on('click', 'div.pl-lastLsit-lessonName', (e) => {
+        let lessonSeq = $(e.target).parents('#proceedingList').find('div.al-lastLsit-lessonSeq').html();
+        location.href = frontURL + 'lesson/detail.html?' + lessonSeq;
+    })
+    $("div.dash-box").on('click', 'div.la-lastLsit-lessonName', (e) => {
+        let lessonSeq = $(e.target).parents('#lastList').find('div.al-lastLsit-lessonSeq').html();
+        location.href = frontURL + 'lesson/detail.html?' + lessonSeq;
+    })
+
     //===  수업 제목 누르면 해당 수업 상세정보로 이동  END ===
 });
 

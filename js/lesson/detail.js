@@ -17,27 +17,30 @@ $(() => {
         success: function (jsonObj) {
             console.log(jsonObj)
 
-            //이미 신청한 사용자라면 버튼 없애기
-            $(jsonObj.lessonDto.alDTO).each((i) => {
-                if (jsonObj.lessonDto.alDTO[i].tuteeId == logined) {
+                if(logined == null){
                     $('#applyBtn').hide();
-                }
-            });
-
-            //이미 즐겨찾기한 사용자라면 버튼 색 바꾸기
-            $(jsonObj.lessonDto.flDTO).each((i) => {
-                if (jsonObj.lessonDto.flDTO[i].tuteeId == logined) {
-                    $('#favoritesBtn').css('backgroundColor', '#DAECE5');
-                    favLesSeq = jsonObj.lessonDto.flDTO[i].favLesSeq;
-                    console.log(favLesSeq)
-                    favStatus = 0; //즐겨찾기OOO
+                    $('#favoritesBtn').hide();
                 } else {
-                    favStatus = 1; //즐겨찾기XXX
+                    //이미 신청한 사용자라면 버튼 없애기
+                    $(jsonObj.lessonDTO.alDTO).each((i) => {
+                        if (jsonObj.lessonDTO.alDTO[i].tuteeId == logined) {
+                            $('#applyBtn').hide();
+                        }
+                    });
+                    //이미 즐겨찾기한 사용자라면 버튼 색 바꾸기
+                   $(jsonObj.lessonDTO.flDTO).each((i) => {
+                       if (jsonObj.lessonDTO.flDTO[i].tuteeId == logined) {
+                           $('#favoritesBtn').css('backgroundColor', '#DAECE5');
+                           favLesSeq = jsonObj.lessonDTO.flDTO[i].favLesSeq;
+                           console.log(favLesSeq)
+                           favStatus = 0; //즐겨찾기OOO
+                       } else {
+                           favStatus = 1; //즐겨찾기XXX
+                       }
+                   });
                 }
-            });
-
             //=================[이미지 다운로드 START]==================
-            let imgPath = jsonObj.lessonDto.imgPath;
+            let imgPath = jsonObj.lessonDTO.lessonImg;
             $.ajax({
                 xhrFields: {
                     responseType: "blob",
@@ -54,7 +57,7 @@ $(() => {
             });
             //=================[이미지 다운로드 END]==================
 
-            let category = jsonObj.lessonDto.category;
+            let category = jsonObj.lessonDTO.category;
             if (category == 0) {
                 category = '프로그래밍 언어';
             } else if (category == 1) {
@@ -67,22 +70,22 @@ $(() => {
                 category = '데이터';
             }
 
-            let price = jsonObj.lessonDto.price;
+            let price = jsonObj.lessonDTO.price;
             if (price == 0) {
                 price = "무료";
             }
 
             $('#detail > .detail-container > .category').html(category)
-            $('#detail > .detail-container > .lessonName').html("<h2>" + jsonObj.lessonDto.lessonName + "</h2>")
-            $('#detail > .detail-container > .tutorName').html(jsonObj.lessonDto.udto.name)
-            $('#detail > .detail-container > .tutorId').html(jsonObj.lessonDto.tdto.tutorId)
+            $('#detail > .detail-container > .lessonName').html("<h2>" + jsonObj.lessonDTO.lessonName + "</h2>")
+            $('#detail > .detail-container > .tutorName').html(jsonObj.lessonDTO.udto.name)
+            $('#detail > .detail-container > .tutorId').html(jsonObj.lessonDTO.tdto.tutorId)
             $('#detail > .detail-container > .category').html(category)
             $('#detail > .detail-container > .price').html(price)
-            $('#detail > .detail-container > .location').html(jsonObj.lessonDto.location)
-            $('#detail > .detail-container > .people').html(jsonObj.lessonDto.people)
-            $('#detail > .detail-container > .cDate').html(jsonObj.lessonDto.startCdate + " ~ " + jsonObj.lessonDto.endCdate)
-            $('#detail > .detail-container > .date').html("신청마감일 ➡️ " + jsonObj.lessonDto.endDate)
-            $('.dContent > .dContent-container > .lesson-detail').html(jsonObj.lessonDto.content)
+            $('#detail > .detail-container > .location').html(jsonObj.lessonDTO.location)
+            $('#detail > .detail-container > .people').html(jsonObj.lessonDTO.people)
+            $('#detail > .detail-container > .cDate').html(jsonObj.lessonDTO.start + " ~ " + jsonObj.lessonDTO.end)
+            $('#detail > .detail-container > .date').html("신청마감일 ➡️ " + jsonObj.lessonDTO.applyEnd)
+            $('.dContent > .dContent-container > .lesson-detail').html(jsonObj.lessonDTO.content)
         },
         error: function (xhr) {
             let jsonObj = JSON.parse(xhr.responseText);
@@ -161,8 +164,6 @@ $(() => {
 
     };
     //=== 수업 신청하기 END
-
-
 });
 
 

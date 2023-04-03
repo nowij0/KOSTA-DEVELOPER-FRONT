@@ -11,32 +11,38 @@ $(() => {
         success: function (jsonObj) {
             console.log(jsonObj)
             $('#showLoginId').html(sessionStorage.getItem("logined"));
-        
             let $origin = $('#review').first();
             let $parent = $('#myreview-list');
-            $(jsonObj).each((i) => {
-                let star;
-                if (2.0 > jsonObj[i].star && jsonObj[i].star >= 0) {
-                    star = "⭐️";
-                } else if (3.0 > jsonObj[i].star && jsonObj[i].star >= 2.0) {
-                    star = "⭐️⭐️";
-                } else if (4.0 > jsonObj[i].star && jsonObj[i].star >= 3.0) {
-                    star = "⭐️⭐️⭐️";
-                } else if (5.0 > jsonObj[i].star && jsonObj[i].star >= 4.0) {
-                    star = "⭐️⭐️⭐️⭐️";
-                } else if (jsonObj[i].star && jsonObj[i].star >= 5.0) {
-                    star = "⭐️⭐️⭐️⭐️⭐️";
-                }
 
-                let $copy = $origin.clone();
-                $copy.find('.lessonName').html(jsonObj[i].lessonName)
-                $copy.find('.name').html(jsonObj[i].name)
-                $copy.find('.star').html(star + " (" + jsonObj[i].star + ")")
-                $copy.find('.review').html(jsonObj[i].review)
-                
-                $parent.append($copy);
-            })
-            $origin.hide();
+            if (jsonObj.length != 0) {
+                $(jsonObj).each((i) => {
+                    let star;
+                    if (2.0 > jsonObj[i].lessonStar && jsonObj[i].lessonStar >= 0) {
+                        star = "⭐️";
+                    } else if (3.0 > jsonObj[i].lessonStar && jsonObj[i].lessonStar >= 2.0) {
+                        star = "⭐️⭐️";
+                    } else if (4.0 > jsonObj[i].lessonStar && jsonObj[i].lessonStar >= 3.0) {
+                        star = "⭐️⭐️⭐️";
+                    } else if (5.0 > jsonObj[i].lessonStar && jsonObj[i].lessonStar >= 4.0) {
+                        star = "⭐️⭐️⭐️⭐️";
+                    } else if (jsonObj[i].lessonStar && jsonObj[i].lessonStar >= 5.0) {
+                        star = "⭐️⭐️⭐️⭐️⭐️";
+                    }
+
+                    let $copy = $origin.clone();
+
+                    $copy.find('.lessonName').html(jsonObj[i].lessonName)
+                    $copy.find('.name').html(jsonObj[i].tuteeName)
+                    $copy.find('.star').html(star + " (" + jsonObj[i].lessonStar + ")")
+                    $copy.find('.review').html(jsonObj[i].lessonReview)
+
+                    $parent.append($copy);
+                })
+                $origin.hide();
+            } else {
+                $origin.hide();
+                $('#noReview').html("작성한 후기가 없습니다.")
+            }
         },
         error: function (xhr) {
             let jsonObj = JSON.parse(xhr.responseText);

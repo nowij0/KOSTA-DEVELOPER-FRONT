@@ -196,10 +196,20 @@ a.dash:hover{
     background-color: #F9F9F9;
 }
 
+#applyWaitList{
+    margin-top: 10px;
+    overflow: scroll;
+}
+
 #notYet{
     height: 120px;
     margin-bottom: 50px;
     background-color: #F9F9F9;
+}
+
+#notYetList{
+    margin-top: 10px;
+    overflow: scroll;
 }
 
 #reject{
@@ -208,16 +218,31 @@ a.dash:hover{
     background-color: #F9F9F9;
 }
 
+#rejectList{
+    margin-top: 10px;
+    overflow: scroll;
+}
+
 #proceed{
     height: 120px;
     margin-bottom: 50px;
     background-color: #F9F9F9;
 }
 
+#proceedingList{
+    margin-top: 10px;
+    overflow: scroll;
+}
+
 #last{
     height: 120px;
     margin-bottom: 50px;
     background-color: #F9F9F9;
+}
+
+#lastList{
+    margin-top: 10px;
+    overflow: scroll;
 }
 
 .lastLsit-lessonName{

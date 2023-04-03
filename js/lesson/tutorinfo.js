@@ -12,7 +12,7 @@ $(() => {
         url: url,
         success: function (jsonObj) {
             console.log(jsonObj)
-            $('#tutor-container > div.tutorName').html(jsonObj[0].name)
+            $('#tutor-container > div.tutorName').html(jsonObj[0].tutorName)
             $('#tutor-container > div.info').html(jsonObj[0].info)
 
             let star;
@@ -42,7 +42,7 @@ $(() => {
                 let $copy = $origin.clone();
 
                 lessonSeq = jsonObj[0].lesson[i].lessonSeq
-                lImgPath = jsonObj[0].lesson[i].imgPath
+                lImgPath = jsonObj[0].lesson[i].lessonImg
                 lessonName = jsonObj[0].lesson[i].lessonName
                 location = jsonObj[0].lesson[i].location
                 price = jsonObj[0].lesson[i].price
@@ -67,7 +67,7 @@ $(() => {
 
 
                         //=================[이미지 다운로드 START]==================
-                        let imgPath = jsonObj[0].imgPath;
+                        let imgPath = jsonObj[0].tutorImg;
                         $.ajax({
                             xhrFields: {
                                 responseType: "blob",

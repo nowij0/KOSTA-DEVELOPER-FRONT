@@ -162,3 +162,12 @@ div.content-container > div > div.main{
     margin-top: 15px;
     background-color: #F9F9F9;
 }
+
+#myreview-list{
+    margin-top: 30px;
+}
+
+#noReview {
+    margin-left: 280px;
+    font-weight: bold;
+}

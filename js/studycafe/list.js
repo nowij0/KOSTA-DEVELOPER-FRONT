@@ -43,8 +43,8 @@ $(()=>{
     }
     //--스터디 카페 목록 보여주기용 함수 END
 
-    let url = backURL + 'studyroom/'
-    let url3= backURL + 'studyroom/roominfo/'
+    let url = backURL + 'studycafe/'
+    let url3= backURL + 'studycafe/roominfo/'
     // ----메인 리스트 출력 START----
     $.ajax({
         xhrFields: {
@@ -68,7 +68,7 @@ $(()=>{
     $('#btn').click(()=>{
         console.log('검색버튼시작')
        
-        let url2= backURL+'studyroom/list'
+        let url2= backURL+'studycafe/list'
  
         var params ={
             srNameAddrName: $("#srNameAddrName").val(),
